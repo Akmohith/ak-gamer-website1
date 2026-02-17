@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AK - Ultimate Neon Gamer</title>
+
+<style>
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #00ffff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ===== MOVING NEON BACKGROUND ===== */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ff00ff, #000000, #00ffff);
+    animation: moveBg 15s linear infinite;
+    z-index: -2;
+}
+
+@keyframes moveBg {
+    0% { transform: translate(-25%, -25%); }
+    50% { transform: translate(0%, 0%); }
+    100% { transform: translate(-25%, -25%); }
+}
+
+/* ===== FIRE PARTICLES ===== */
+.fire {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.fire span {
+    position: absolute;
+    bottom: -20px;
+    width: 5px;
+    height: 20px;
+    background: orange;
+    border-radius: 50%;
+    animation: rise 5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(0); opacity: 0; }
+}
+
+/* ===== TEXT EFFECTS ===== */
+h1 {
+    font-size: 50px;
+    color: #ff00ff;
+    text-shadow: 0 0 20px #ff00ff;
+}
+
+.typing {
+    font-size: 22px;
+    border-right: 3px solid #00ffff;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+    to { width: 320px; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.card {
+    border: 2px solid #00ffff;
+    margin: 25px auto;
+    padding: 25px;
+    width: 75%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffff;
+    background: rgba(0,0,0,0.7);
+}
+
+button {
+    padding: 12px 30px;
+    background: #ff00ff;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff00ff;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #00ffff;
+    color: black;
+    box-shadow: 0 0 30px #00ffff;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FIRE PARTICLES -->
+<div class="fire">
+    <span style="left:10%; animation-delay:0s;"></span>
+    <span style="left:20%; animation-delay:1s;"></span>
+    <span style="left:30%; animation-delay:2s;"></span>
+    <span style="left:40%; animation-delay:3s;"></span>
+    <span style="left:50%; animation-delay:1.5s;"></span>
+    <span style="left:60%; animation-delay:2.5s;"></span>
+    <span style="left:70%; animation-delay:0.5s;"></span>
+    <span style="left:80%; animation-delay:3.5s;"></span>
+</div>
+
+<header>
+    <h1>AK 🎮</h1>
+    <div class="typing">🔥 Ultimate FREE FIRE Neon Gamer 🔥</div>
+</header>
+
+<section class="card">
+    <h2>About Me</h2>
+    <p>Competitive FREE FIRE player who loves clutch moments and ranked domination.</p>
+</section>
+
+<section class="card">
+    <h2>FREE FIRE Profile</h2>
+    <p>🏆 Rank: Heroic</p>
+    <p>🔥 K/D Ratio: 4.5+</p>
+    <p>⚡ Play Style: Rush & Sniper</p>
+    <p><strong>My UID: 12345678</strong></p>
+    <p>If you want to play with me, send request to my UID!</p>
+</section>
+
+<section>
+    <button onclick="join()">Join My Squad 🔥</button>
+</section>
+
+<footer>
+    © 2026 AK Neon Gamer
+</footer>
+
+<script>
+function join() {
+    alert("Send request to UID 12345678 and let's dominate FREE FIRE 🔥🎮");
+}
+</script>
+
+</body>
+</html>
