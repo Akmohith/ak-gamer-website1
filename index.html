@@ -4,6 +4,7 @@
 <title>AK - Ultimate Neon Gamer</title>
 
 <style>
+/* ===== BODY ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -89,51 +90,21 @@ h1 {
     background: rgba(0,0,0,0.7);
 }
 
-/* ===== NORMAL BUTTON ===== */
 button {
     padding: 12px 30px;
+    background: #ff00ff;
     border: none;
+    color: white;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0 0 20px #ff00ff;
     font-size: 16px;
 }
 
-/* ===== FREE FIRE ANIMATED BUTTON ===== */
-.ff-btn {
-    padding: 15px 40px;
-    font-size: 18px;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00);
-    border-radius: 12px;
-    cursor: pointer;
-    color: black;
-    text-transform: uppercase;
-    animation: glow 1.5s infinite alternate;
-    box-shadow: 0 0 20px red;
-    transition: 0.3s;
-}
-
-.ff-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 40px yellow;
-}
-
-@keyframes glow {
-    from { box-shadow: 0 0 20px red; }
-    to { box-shadow: 0 0 40px orange; }
-}
-
-/* ===== COPY BUTTON ===== */
-.copy-btn {
+button:hover {
     background: #00ffff;
     color: black;
-    margin-top: 10px;
-    box-shadow: 0 0 15px #00ffff;
-}
-
-.copy-btn:hover {
-    background: #ff00ff;
-    color: white;
+    box-shadow: 0 0 30px #00ffff;
 }
 
 footer {
@@ -145,6 +116,7 @@ footer {
 
 <body>
 
+<!-- FIRE PARTICLES -->
 <div class="fire">
     <span style="left:10%; animation-delay:0s;"></span>
     <span style="left:20%; animation-delay:1s;"></span>
@@ -153,4 +125,41 @@ footer {
     <span style="left:50%; animation-delay:1.5s;"></span>
     <span style="left:60%; animation-delay:2.5s;"></span>
     <span style="left:70%; animation-delay:0.5s;"></span>
-    <span style="left:80%; animation-delay:3.
+    <span style="left:80%; animation-delay:3.5s;"></span>
+</div>
+
+<header>
+    <h1>AK 🎮</h1>
+    <div class="typing">🔥 Ultimate FREE FIRE Neon Gamer 🔥</div>
+</header>
+
+<section class="card">
+    <h2>About Me</h2>
+    <p>Competitive FREE FIRE player who loves clutch moments and ranked domination.</p>
+</section>
+
+<section class="card">
+    <h2>FREE FIRE Profile</h2>
+    <p>🏆 Rank: Heroic</p>
+    <p>🔥 K/D Ratio: 4.5+</p>
+    <p>⚡ Play Style: Rush & Sniper</p>
+    <p><strong>My UID: 12345678</strong></p>
+    <p>If you want to play with me, send request to my UID!</p>
+</section>
+
+<section>
+    <button onclick="join()">Join My Squad 🔥</button>
+</section>
+
+<footer>
+    © 2026 AK Neon Gamer
+</footer>
+
+<script>
+function join() {
+    alert("Send request to UID 12345678 and let's dominate FREE FIRE 🔥🎮");
+}
+</script>
+
+</body>
+</html>
